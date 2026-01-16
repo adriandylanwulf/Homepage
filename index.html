@@ -2,157 +2,156 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Dein Name – Persönliche Seite</title>
+  <title>Adrian Dylan Wulf</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Kurzbeschreibung von dir und deinen Projekten.">
-  <link rel="icon" href="/favicon.ico">
+  <meta name="description" content="Adrian Dylan Wulf – Webentwickler & Sysadmin aus Nordrhein-Westfalen.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👤</text></svg>">
   <style>
     :root {
-      --bg: #0f172a;
-      --fg: #e5e7eb;
-      --accent: #38bdf8;
-      --muted: #9ca3af;
-      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg: #fafafa;
+      --fg: #111827;
+      --accent: #0ea5e9;
+      --muted: #6b7280;
+      --glass: rgba(255,255,255,0.8);
+      --border: rgba(0,0,0,0.1);
+      --shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      --font: system-ui, -apple-system, sans-serif;
     }
-    * { box-sizing: border-box; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --fg: #f8fafc;
+        --accent: #38bdf8;
+        --muted: #94a3b8;
+        --glass: rgba(30,41,59,0.8);
+        --border: rgba(255,255,255,0.1);
+        --shadow: 0 25px 50px -12px rgba(0,0,0,0.7);
+      }
+    }
+    * { box-sizing: border-box; margin: 0; }
     body {
-      margin: 0;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
-      background: radial-gradient(circle at top, #1f2937, #020617);
+      background: linear-gradient(135deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 80%, var(--accent)) 100%);
       color: var(--fg);
       font-family: var(--font);
+      line-height: 1.6;
+      backdrop-filter: blur(20px);
     }
     main {
-      max-width: 720px;
+      max-width: 600px;
       width: 100%;
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
-      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
     }
     header h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
       margin: 0 0 .25rem;
-      font-size: 2rem;
+      background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 70%, transparent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    header p.tagline {
-      margin: 0 0 1.5rem;
+    .tagline {
+      margin: 0 0 2rem;
       color: var(--muted);
+      font-size: 1.1rem;
     }
     section {
-      margin-top: 1.5rem;
+      margin-top: 2rem;
     }
     h2 {
-      margin: 0 0 .5rem;
-      font-size: 1rem;
-      letter-spacing: .08em;
+      margin: 0 0 .75rem;
+      font-size: .95rem;
+      font-weight: 500;
+      letter-spacing: .05em;
       text-transform: uppercase;
       color: var(--muted);
     }
-    p { margin: 0 0 .75rem; line-height: 1.6; }
+    p { margin: 0 0 1rem; }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: .6rem;
+      gap: .75rem;
       margin-top: .5rem;
     }
     .links a {
       text-decoration: none;
-      padding: .35rem .8rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
+      padding: .5rem 1.25rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
       color: var(--fg);
-      font-size: .9rem;
-      transition: border-color .15s ease, background-color .15s ease, color .15s ease;
+      font-weight: 500;
+      font-size: .95rem;
+      backdrop-filter: blur(10px);
+      transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left .5s;
     }
     .links a:hover {
       border-color: var(--accent);
-      background: rgba(56, 189, 248, 0.1);
-      color: var(--accent);
+      box-shadow: 0 8px 25px color-mix(in srgb, var(--accent) 20%, transparent);
+      transform: translateY(-2px);
     }
-
-    .projects {
-      list-style: none;
-      padding: 0;
-      margin: .25rem 0 0;
-    }
-    .projects li + li { margin-top: .5rem; }
-    .projects a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .projects a:hover { text-decoration: underline; }
+    .links a:hover::before { left: 100%; }
 
     footer {
-      margin-top: 2rem;
-      font-size: .8rem;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: .85rem;
       color: var(--muted);
       display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: .5rem;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
+      body { padding: 1rem; }
       main { padding: 2rem 1.5rem; }
-      header h1 { font-size: 1.6rem; }
     }
   </style>
 </head>
 <body>
 <main>
   <header>
-    <h1>Dein Name</h1>
-    <p class="tagline">Kurzclaim, z.B. Webentwickler & Admin aus NRW.</p>
+    <h1>Adrian Dylan Wulf</h1>
+    <p class="tagline">Webentwickler & Sysadmin aus Nordrhein-Westfalen.</p>
   </header>
 
   <section aria-labelledby="about">
     <h2 id="about">Über mich</h2>
     <p>
-      2–3 Sätze zu dir, Tech-Stack, Interessen (z.B. Webhosting, Mail-Infrastruktur, Amateurfunk).
+      Ich manage private und business Infrastrukturen mit Plesk, WordPress und Email-Sicherheit. 
+      Spezialisiert auf Serverkonfiguration, Domain-Management und Webentwicklung.
     </p>
     <div class="links">
-      <a href="mailto:du@deinedomain.de">E-Mail</a>
-      <a href="https://github.com/deinuser" rel="me">GitHub</a>
-      <a href="https://keybase.io/deinuser" rel="me">Keybase</a>
-      <!-- weitere Links nach Bedarf -->
+      <a href="mailto:contact@adriandylanwulf.de">contact@adriandylanwulf.de</a>
+      <!-- Füge hier GitHub, Keybase etc. hinzu, falls vorhanden -->
     </div>
   </section>
 
-  <section aria-labelledby="projects">
-    <h2 id="projects">Projekte & Links</h2>
-    <ul class="projects">
-      <li>
-        <strong>Projekt/Domain 1:</strong>
-        <a href="https://example1.tld">example1.tld</a> – Ein Satz, was es ist.
-      </li>
-      <li>
-        <strong>Projekt/Tool 2:</strong>
-        <a href="https://example2.tld">example2.tld</a> – Kurzbeschreibung.
-      </li>
-    </ul>
-  </section>
-
-  <section aria-labelledby="contact">
-    <h2 id="contact">Kontakt & Key</h2>
-    <p>
-      Optional Hinweis auf bevorzugten Kontaktweg oder Public-Key / Fingerprint.
-    </p>
-  </section>
-
   <footer>
-    <span>© <span id="year">2026</span> Dein Name</span>
-    <a href="/impressum.html">Impressum</a>
+    <p>Diese Seite dient rein privaten Zwecken und unterliegt keiner Impressumspflicht (§ 5 DDG).</p>
+    <p>Betreiber: Adrian Dylan Wulf, Nordrhein-Westfalen. © 2026.</p>
   </footer>
 </main>
-
-<script>
-  // optional: aktuelles Jahr automatisch
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 </body>
 </html>
