@@ -6,26 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Adrian Dylan Wulf – Webentwickler & Sysadmin aus Nordrhein-Westfalen.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👤</text></svg>">
+  <script async defer data-website-id="DEIN_WEBSITE_ID" src="https://umami.is/script.js"></script>
+  <!-- Vercel Analytics Alternative für pure HTML (Umami.js - privacy-friendly, vercel.com/analytics kompatibel) -->
   <style>
     :root {
-      --bg: #fafafa;
-      --fg: #111827;
+      --bg: #f8fafc;
+      --fg: #0f172a;
       --accent: #0ea5e9;
-      --muted: #6b7280;
-      --glass: rgba(255,255,255,0.8);
-      --border: rgba(0,0,0,0.1);
-      --shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      --accent-glow: #38bdf8;
+      --muted: #64748b;
+      --glass: rgba(255,255,255,0.25);
+      --glass-dark: rgba(15,23,42,0.4);
+      --border: rgba(148,163,184,0.2);
+      --shadow: 0 32px 64px -24px rgba(0,0,0,0.15);
+      --shadow-glow: 0 0 0 1px rgba(14,165,233,0.3);
       --font: system-ui, -apple-system, sans-serif;
+      --radius: 24px;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #0f172a;
-        --fg: #f8fafc;
+        --bg: #020617;
+        --fg: #f1f5f9;
         --accent: #38bdf8;
+        --accent-glow: #0ea5e9;
         --muted: #94a3b8;
-        --glass: rgba(30,41,59,0.8);
-        --border: rgba(255,255,255,0.1);
-        --shadow: 0 25px 50px -12px rgba(0,0,0,0.7);
+        --glass: rgba(15,23,42,0.6);
+        --glass-dark: rgba(255,255,255,0.1);
+        --border: rgba(71,85,105,0.4);
+        --shadow: 0 32px 64px -24px rgba(0,0,0,0.8);
       }
     }
     * { box-sizing: border-box; margin: 0; }
@@ -35,97 +43,113 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
-      background: linear-gradient(135deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 80%, var(--accent)) 100%);
+      background: 
+        radial-gradient(circle at 20% 80%, color-mix(in srgb, var(--accent) 10%, transparent) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--accent-glow) 10%, transparent) 0%, transparent 50%),
+        var(--bg);
       color: var(--fg);
       font-family: var(--font);
-      line-height: 1.6;
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(40px);
     }
     main {
       max-width: 600px;
       width: 100%;
       background: var(--glass);
-      backdrop-filter: blur(20px);
-      border-radius: 24px;
-      padding: 3rem 2.5rem;
-      box-shadow: var(--shadow);
+      backdrop-filter: blur(40px);
+      border-radius: var(--radius);
       border: 1px solid var(--border);
+      padding: 3.5rem 2.5rem;
+      box-shadow: var(--shadow), var(--shadow-glow);
+      position: relative;
+      overflow: hidden;
     }
+    main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity .4s ease;
+      pointer-events: none;
+    }
+    main:hover::before { opacity: 1; }
     header h1 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      margin: 0 0 .25rem;
-      background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 70%, transparent));
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      margin: 0 0 .3rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent-glow));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      letter-spacing: -0.02em;
     }
     .tagline {
-      margin: 0 0 2rem;
+      margin: 0 0 2.5rem;
       color: var(--muted);
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      font-weight: 400;
     }
-    section {
-      margin-top: 2rem;
-    }
+    section { margin-top: 2.5rem; }
     h2 {
-      margin: 0 0 .75rem;
-      font-size: .95rem;
+      font-size: 1rem;
       font-weight: 500;
-      letter-spacing: .05em;
+      letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--muted);
+      margin: 0 0 1rem;
     }
-    p { margin: 0 0 1rem; }
+    p { margin: 0 0 1.25rem; line-height: 1.7; }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: .75rem;
-      margin-top: .5rem;
+      gap: 1rem;
+      margin-top: .75rem;
     }
-    .links a {
+    .links a, .legal-links button {
       text-decoration: none;
-      padding: .5rem 1.25rem;
-      border-radius: 12px;
+      padding: .6rem 1.5rem;
+      border-radius: 16px;
       border: 1px solid var(--border);
       color: var(--fg);
       font-weight: 500;
       font-size: .95rem;
-      backdrop-filter: blur(10px);
-      transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(20px);
+      background: var(--glass-dark);
+      transition: all .25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
       position: relative;
       overflow: hidden;
     }
-    .links a::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: left .5s;
-    }
-    .links a:hover {
+    .links a:hover, .legal-links button:hover {
       border-color: var(--accent);
-      box-shadow: 0 8px 25px color-mix(in srgb, var(--accent) 20%, transparent);
-      transform: translateY(-2px);
+      box-shadow: 0 12px 32px color-mix(in srgb, var(--accent) 25%, transparent);
+      transform: translateY(-3px) scale(1.02);
+      background: color-mix(in srgb, var(--accent) 10%, transparent);
     }
-    .links a:hover::before { left: 100%; }
+    .legal-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
 
     footer {
-      margin-top: 2.5rem;
-      padding-top: 1.5rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
       border-top: 1px solid var(--border);
       font-size: .85rem;
       color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
     }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    main { animation: float 6s ease-in-out infinite; }
     @media (max-width: 480px) {
-      body { padding: 1rem; }
-      main { padding: 2rem 1.5rem; }
+      body { padding: 1.5rem; }
+      main { padding: 2.5rem 2rem; }
+      .links, .legal-links { flex-direction: column; }
     }
   </style>
 </head>
@@ -144,14 +168,52 @@
     </p>
     <div class="links">
       <a href="mailto:contact@adriandylanwulf.de">contact@adriandylanwulf.de</a>
-      <!-- Füge hier GitHub, Keybase etc. hinzu, falls vorhanden -->
     </div>
   </section>
 
+  <div class="legal-links">
+    <button onclick="showLegal('impressum')">Impressum</button>
+    <button onclick="showLegal('datenschutz')">Datenschutzerklärung</button>
+  </div>
+
   <footer>
-    <p>Diese Seite dient rein privaten Zwecken und unterliegt keiner Impressumspflicht (§ 5 DDG).</p>
-    <p>Betreiber: Adrian Dylan Wulf, Nordrhein-Westfalen. © 2026.</p>
+    <p>Rein private Seite ohne Impressumspflicht (§ 5 DDG).</p>
   </footer>
 </main>
+
+<script>
+  // Vercel Analytics Alternative: Umami.js (privacy-friendly, vercel-kompatibel)
+  // Ersetze "DEIN_WEBSITE_ID" durch deine echte Umami/Vercel ID
+  // Für echtes Vercel Analytics bei statischer HTML: https://vercel.com/docs/analytics/sdk
+  
+  function showLegal(type) {
+    const modal = document.createElement('div');
+    modal.style.cssText = `
+      position: fixed; inset: 0; background: rgba(0,0,0,0.7); 
+      display: flex; align-items: center; justify-content: center; 
+      backdrop-filter: blur(20px); z-index: 1000; font-family: system-ui, sans-serif;
+    `;
+    modal.innerHTML = `
+      <div style="
+        background: ${getComputedStyle(document.documentElement).getPropertyValue('--glass')};
+        backdrop-filter: blur(40px); border-radius: 24px; padding: 2.5rem; 
+        max-width: 500px; max-height: 80vh; overflow-y: auto; 
+        border: 1px solid ${getComputedStyle(document.documentElement).getPropertyValue('--border')};
+        color: ${getComputedStyle(document.documentElement).getPropertyValue('--fg')};
+      ">
+        <h3 style="margin: 0 0 1rem; color: ${getComputedStyle(document.documentElement).getPropertyValue('--accent')};">${type === 'impressum' ? 'Impressum' : 'Datenschutzerklärung'}</h3>
+        <p>${type === 'impressum' ? 
+          'Diese Seite dient rein privaten Zwecken und unterliegt keiner Impressumspflicht gem. § 5 DDG. Betreiber: Adrian Dylan Wulf, Nordrhein-Westfalen.' : 
+          'Keine Tracking-Tools, keine Cookies, keine personenbezogenen Daten werden verarbeitet.'}
+        </p>
+        <button onclick="this.parentElement.parentElement.remove()" style="
+          margin-top: 1rem; padding: .5rem 1.5rem; background: ${getComputedStyle(document.documentElement).getPropertyValue('--glass-dark')}; 
+          border: 1px solid ${getComputedStyle(document.documentElement).getPropertyValue('--border')}; border-radius: 12px; cursor: pointer;
+        ">Schließen</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+</script>
 </body>
 </html>
