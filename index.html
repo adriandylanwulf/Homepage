@@ -5,47 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Adrian Dylan Wulf - Webentwicklung, IT-Sicherheit und Infrastruktur Lösungen">
     <meta name="author" content="Adrian Dylan Wulf">
-    <meta name="theme-color" content="#0f172a">
-    <title>Adrian Dylan Wulf | Webentwicklung & IT-Sicherheit</title>
+    <meta name="theme-color" content="#0a0a0a">
+    <title>Adrian Dylan Wulf | Developer & Security Enthusiast</title>
     <style>
         :root {
-            /* Primitive Colors */
+            /* Premium Color Palette */
             --color-white: rgba(255, 255, 255, 1);
             --color-black: rgba(0, 0, 0, 1);
-            --color-slate-50: rgba(248, 250, 252, 1);
-            --color-slate-100: rgba(241, 245, 249, 1);
-            --color-slate-200: rgba(226, 232, 240, 1);
-            --color-slate-300: rgba(203, 213, 225, 1);
-            --color-slate-400: rgba(148, 163, 184, 1);
-            --color-slate-500: rgba(100, 116, 139, 1);
-            --color-slate-600: rgba(71, 85, 105, 1);
-            --color-slate-700: rgba(51, 65, 85, 1);
-            --color-slate-800: rgba(30, 41, 59, 1);
-            --color-slate-900: rgba(15, 23, 42, 1);
-            --color-slate-950: rgba(2, 6, 23, 1);
-            --color-blue-400: rgba(96, 165, 250, 1);
-            --color-blue-500: rgba(59, 130, 246, 1);
-            --color-blue-600: rgba(37, 99, 235, 1);
-            --color-blue-700: rgba(29, 78, 216, 1);
-            --color-emerald-400: rgba(52, 211, 153, 1);
-            --color-emerald-500: rgba(16, 185, 129, 1);
-            --color-emerald-600: rgba(5, 150, 105, 1);
-            --color-amber-500: rgba(245, 158, 11, 1);
-            --color-red-500: rgba(239, 68, 68, 1);
-            --color-cyan-400: rgba(34, 211, 238, 1);
-            --color-cyan-500: rgba(6, 182, 212, 1);
-
-            /* Light Mode */
-            --bg-primary: var(--color-white);
-            --bg-secondary: var(--color-slate-50);
-            --bg-tertiary: var(--color-slate-100);
-            --text-primary: var(--color-slate-900);
-            --text-secondary: var(--color-slate-600);
-            --text-tertiary: var(--color-slate-500);
-            --border-color: var(--color-slate-200);
-            --accent-color: var(--color-blue-600);
-            --accent-hover: var(--color-blue-700);
-            --accent-light: var(--color-blue-500);
+            --color-dark: rgba(10, 10, 10, 1);
+            --color-dark-secondary: rgba(20, 20, 20, 1);
+            --color-gray-300: rgba(212, 212, 212, 1);
+            --color-gray-500: rgba(115, 115, 115, 1);
+            --color-gray-700: rgba(64, 64, 64, 1);
+            --color-accent: rgba(200, 150, 100, 1);
+            --color-accent-light: rgba(220, 170, 120, 1);
 
             /* Spacing */
             --space-4: 0.25rem;
@@ -58,39 +31,20 @@
             --space-40: 2.5rem;
             --space-48: 3rem;
             --space-64: 4rem;
-
-            /* Border Radius */
-            --radius-sm: 0.375rem;
-            --radius-md: 0.5rem;
-            --radius-lg: 0.75rem;
-            --radius-xl: 1rem;
-            --radius-2xl: 1.5rem;
-
-            /* Shadows */
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            --space-80: 5rem;
 
             /* Transitions */
             --transition-fast: 150ms ease-in-out;
-            --transition-normal: 250ms ease-in-out;
-            --transition-slow: 350ms ease-in-out;
+            --transition-normal: 300ms ease-in-out;
+            --transition-slow: 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        @media (prefers-color-scheme: dark) {
+        @media (prefers-color-scheme: light) {
             :root {
-                --bg-primary: var(--color-slate-950);
-                --bg-secondary: var(--color-slate-900);
-                --bg-tertiary: var(--color-slate-800);
-                --text-primary: var(--color-slate-50);
-                --text-secondary: var(--color-slate-300);
-                --text-tertiary: var(--color-slate-400);
-                --border-color: var(--color-slate-700);
-                --accent-color: var(--color-blue-400);
-                --accent-hover: var(--color-blue-500);
-                --accent-light: var(--color-blue-300);
+                --color-dark: rgba(250, 250, 250, 1);
+                --color-dark-secondary: rgba(240, 240, 240, 1);
+                --color-gray-500: rgba(100, 100, 100, 1);
+                --color-gray-700: rgba(40, 40, 40, 1);
             }
         }
 
@@ -105,213 +59,266 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            transition: background-color var(--transition-normal), color var(--transition-normal);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            background: var(--color-dark);
+            color: var(--color-gray-700);
+            line-height: 1.8;
+            letter-spacing: 0.3px;
+            transition: background var(--transition-normal), color var(--transition-normal);
         }
 
         /* Navigation */
         nav {
             position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
+            top: var(--space-20);
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(200, 150, 100, 0.25);
+            border-radius: 50px;
             z-index: 1000;
             transition: all var(--transition-normal);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: var(--space-16) var(--space-40);
+            box-shadow: 0 10px 40px rgba(200, 150, 100, 0.1);
         }
 
-        nav.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            nav {
-                background: rgba(2, 6, 23, 0.95);
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            }
-
-            nav.scrolled {
-                background: rgba(2, 6, 23, 0.98);
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-            }
-        }
-
-        nav .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: var(--space-16) var(--space-32);
+        .nav-container {
+            max-width: none;
+            margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 0;
         }
 
         .nav-logo {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 700;
-            color: var(--accent-color);
+            color: var(--color-accent);
             text-decoration: none;
-            letter-spacing: -0.5px;
-            flex-shrink: 0;
+            letter-spacing: 0.5px;
+            transition: all var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            white-space: nowrap;
         }
 
         .nav-logo:hover {
-            color: var(--accent-hover);
+            color: var(--color-accent-light);
         }
 
         .nav-links {
             display: none;
-            gap: var(--space-40);
+            gap: 0;
             list-style: none;
+            flex-wrap: nowrap;
+            justify-content: center;
+            padding-left: 0;
         }
 
         .nav-links a {
-            color: var(--text-primary);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.75rem;
             font-weight: 500;
-            transition: color var(--transition-fast);
+            transition: all var(--transition-normal);
             position: relative;
+            padding: var(--space-12) var(--space-14);
+            background: transparent;
+            border: none;
+            letter-spacing: 0.2px;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent-light);
+        }
+
+        .nav-links a.active {
+            color: var(--color-accent);
+            font-weight: 600;
         }
 
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -4px;
-            left: 0;
+            bottom: -6px;
+            left: 50%;
             width: 0;
             height: 2px;
-            background: var(--accent-color);
-            transition: width var(--transition-fast);
+            background: var(--color-accent);
+            transition: width var(--transition-normal);
+            transform: translateX(-50%);
         }
 
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
+        @media (max-width: 768px) {
+            nav {
+                top: var(--space-12);
+                padding: var(--space-14) var(--space-28);
+            }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+            .nav-container {
+                gap: 0;
+            }
 
-        @media (min-width: 768px) {
+            .nav-logo {
+                font-size: 0.9rem;
+                gap: var(--space-6);
+            }
+
             .nav-links {
-                display: flex;
+                gap: 0;
+                padding-left: 0;
+            }
+
+            .nav-links a {
+                font-size: 0.7rem;
+                padding: var(--space-8) var(--space-10);
             }
         }
 
-        /* Main Content */
+        /* Main Container */
         main {
-            padding-top: 80px;
+            padding-top: 120px;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 var(--space-16);
+            padding: 0 var(--space-40);
+            border-radius: 20px;
         }
 
         /* Hero Section */
         .hero {
-            padding: var(--space-64) var(--space-16);
+            padding: var(--space-80) var(--space-40);
             text-align: center;
-            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
             position: relative;
             overflow: hidden;
+            margin: 0 var(--space-20);
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(200, 150, 100, 0.03) 0%, rgba(220, 170, 120, 0.02) 100%);
+            border: 1px solid rgba(200, 150, 100, 0.1);
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
+            top: -30%;
             right: -20%;
-            width: 600px;
-            height: 600px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(200, 150, 100, 0.08) 0%, transparent 70%);
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
             pointer-events: none;
+            animation: float 20s ease-in-out infinite;
         }
 
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -30%;
-            left: -10%;
-            width: 500px;
-            height: 500px;
+            bottom: -40%;
+            left: -30%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(200, 150, 100, 0.05) 0%, transparent 70%);
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
             pointer-events: none;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(30px) scale(1.05); }
         }
 
         .hero-content {
-            background: var(--bg-secondary);
-            border-radius: var(--radius-2xl);
-            padding: var(--space-64) var(--space-48);
-            max-width: 900px;
-            margin: 0 auto;
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-2xl);
             position: relative;
             z-index: 1;
-            backdrop-filter: blur(10px);
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            margin-bottom: var(--space-20);
+            font-size: clamp(2.5rem, 8vw, 5rem);
             font-weight: 800;
+            margin-bottom: var(--space-24);
+            line-height: 1.1;
             letter-spacing: -1.5px;
-            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: var(--space-32);
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            animation: slideUp 0.8s ease-out 0.1s both;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero .subtitle {
-            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-            color: var(--text-secondary);
-            margin-bottom: var(--space-24);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 600;
-        }
-
-        .hero .description {
             font-size: 1.05rem;
-            color: var(--text-tertiary);
-            margin-bottom: var(--space-40);
-            max-width: 700px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: var(--space-48);
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
-            line-height: 1.8;
+            line-height: 1.9;
+            animation: slideUp 0.8s ease-out 0.2s both;
         }
 
         .cta-buttons {
             display: flex;
-            gap: var(--space-16);
+            gap: var(--space-20);
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: var(--space-32);
+            animation: slideUp 0.8s ease-out 0.3s both;
         }
 
         .btn {
             padding: var(--space-16) var(--space-40);
-            border-radius: 25px;
-            font-size: 1.05rem;
+            border-radius: 6px;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
             border: none;
             cursor: pointer;
             transition: all var(--transition-normal);
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-8);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
             position: relative;
             overflow: hidden;
         }
@@ -323,7 +330,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.15);
             transition: left var(--transition-normal);
             z-index: 0;
         }
@@ -333,291 +340,194 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
-            color: var(--color-white);
-            border: 2px solid transparent;
-            box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+            background: var(--color-accent);
+            color: var(--color-dark);
+            border: 2px solid var(--color-accent);
+            box-shadow: 0 10px 30px rgba(200, 150, 100, 0.2);
         }
 
         .btn-primary:hover {
-            background: linear-gradient(135deg, var(--accent-hover) 0%, var(--accent-color) 100%);
+            background: var(--color-accent-light);
+            border-color: var(--color-accent-light);
             transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 15px 40px rgba(200, 150, 100, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--accent-color);
-            border: 2px solid var(--accent-color);
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
             position: relative;
             z-index: 1;
         }
 
-        .btn-secondary::before {
-            background: var(--accent-color);
-            z-index: -1;
-        }
-
         .btn-secondary:hover {
-            color: var(--color-white);
+            background: var(--color-accent);
+            color: var(--color-dark);
             transform: translateY(-3px);
-            box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 30px rgba(200, 150, 100, 0.25);
         }
 
-        /* Skills Section */
-        .skills {
-            padding: var(--space-64) var(--space-16);
-            background: var(--bg-secondary);
-            position: relative;
+        /* Content Sections */
+        .content-section {
+            padding: var(--space-80) var(--space-40);
+            margin: var(--space-40) var(--space-20);
+            border-radius: 30px;
+            border: 1px solid rgba(200, 150, 100, 0.1);
+            background: linear-gradient(135deg, rgba(200, 150, 100, 0.02) 0%, rgba(220, 170, 120, 0.01) 100%);
+        }
+
+        .content-section:nth-child(odd) {
+            background: linear-gradient(135deg, rgba(200, 150, 100, 0.03) 0%, rgba(220, 170, 120, 0.02) 100%);
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin-bottom: var(--space-64);
+            text-align: center;
         }
 
         .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 700;
-            margin-bottom: var(--space-48);
-            text-align: center;
-            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: var(--space-20);
+            letter-spacing: -0.8px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-24);
-            margin-bottom: var(--space-48);
+        .section-description {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.9;
+            letter-spacing: 0.2px;
         }
 
-        .skill-card {
-            background: var(--bg-primary);
-            padding: var(--space-32);
-            border-radius: var(--radius-2xl);
-            border: 1px solid var(--border-color);
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-32);
+            margin-top: var(--space-48);
+        }
+
+        .grid-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(200, 150, 100, 0.15);
+            padding: var(--space-40);
+            border-radius: 20px;
             transition: all var(--transition-normal);
-            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .skill-card::before {
+        .grid-item::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
             transform: translateX(-100%);
             transition: transform var(--transition-normal);
         }
 
-        .skill-card:hover::before {
+        .grid-item:hover::before {
             transform: translateX(100%);
         }
 
-        .skill-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-            border-color: var(--accent-color);
+        .grid-item:hover {
+            background: rgba(200, 150, 100, 0.05);
+            border-color: rgba(200, 150, 100, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(200, 150, 100, 0.1);
         }
 
-        .skill-icon {
-            font-size: 3.5rem;
-            margin-bottom: var(--space-16);
+        .grid-item-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-20);
             display: inline-block;
-            transition: transform var(--transition-normal);
         }
 
-        .skill-card:hover .skill-icon {
-            transform: scale(1.2) rotate(5deg);
-        }
-
-        .skill-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: var(--space-12);
-            color: var(--text-primary);
+        .grid-item h3 {
+            font-size: 1.3rem;
             font-weight: 700;
-        }
-
-        .skill-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Services Section */
-        .services {
-            padding: var(--space-64) var(--space-16);
-            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--space-24);
-        }
-
-        .service-item {
-            background: var(--bg-secondary);
-            padding: var(--space-32);
-            border-radius: var(--radius-2xl);
-            border: 1px solid var(--border-color);
-            transition: all var(--transition-normal);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-item::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            opacity: 0;
-            transition: all var(--transition-normal);
-        }
-
-        .service-item:hover {
-            border-color: var(--accent-color);
-            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
-            transform: translateY(-6px);
-        }
-
-        .service-item:hover::after {
-            opacity: 1;
-            right: -30px;
-            top: -30px;
-        }
-
-        .service-item h3 {
-            font-size: 1.4rem;
+            color: var(--color-accent);
             margin-bottom: var(--space-16);
-            color: var(--accent-color);
-            font-weight: 700;
+            letter-spacing: 0.2px;
         }
 
-        .service-item p {
-            color: var(--text-secondary);
+        .grid-item p {
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.8;
             font-size: 0.95rem;
-            line-height: 1.7;
-            position: relative;
-            z-index: 1;
+            letter-spacing: 0.1px;
         }
 
         /* Tech Stack */
-        .tech-stack {
-            padding: var(--space-64) var(--space-16);
-            background: var(--bg-secondary);
-        }
-
-        .tech-grid {
+        .tech-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: var(--space-24);
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: var(--space-20);
+            margin-top: var(--space-48);
         }
 
-        .tech-item {
-            background: var(--bg-primary);
-            padding: var(--space-24) var(--space-20);
-            border-radius: var(--radius-xl);
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(200, 150, 100, 0.2);
+            padding: var(--space-20) var(--space-24);
+            border-radius: 18px;
             text-align: center;
-            border: 2px solid var(--border-color);
             transition: all var(--transition-normal);
-            position: relative;
+            cursor: default;
         }
 
-        .tech-item::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: var(--radius-xl);
-            padding: 2px;
-            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity var(--transition-normal);
+        .tech-tag:hover {
+            background: rgba(200, 150, 100, 0.1);
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(200, 150, 100, 0.15);
         }
 
-        .tech-item:hover::before {
-            opacity: 1;
-        }
-
-        .tech-item:hover {
-            background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
-            color: var(--color-white);
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.3);
-        }
-
-        .tech-item strong {
+        .tech-tag strong {
             display: block;
+            color: var(--color-accent);
             margin-bottom: var(--space-8);
-            font-size: 1.05rem;
-            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
-        .tech-item span {
-            display: block;
+        .tech-tag span {
+            color: rgba(255, 255, 255, 0.5);
             font-size: 0.85rem;
             line-height: 1.6;
         }
 
         /* Contact Section */
-        .contact {
-            padding: var(--space-64) var(--space-16);
+        .contact-section {
             text-align: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        .contact::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 700px;
-            height: 700px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .contact h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: var(--space-24);
-            font-weight: 800;
-            color: var(--text-primary);
-            position: relative;
             z-index: 1;
         }
 
-        .contact p {
+        .contact-text {
             font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-32);
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-            position: relative;
-            z-index: 1;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 600px;
+            margin: 0 auto var(--space-40);
+            line-height: 1.9;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: var(--space-32);
+            gap: var(--space-24);
             flex-wrap: wrap;
-            margin-bottom: var(--space-32);
-            position: relative;
-            z-index: 1;
+            margin-bottom: var(--space-40);
         }
 
         .social-link {
@@ -627,10 +537,10 @@
             align-items: center;
             justify-content: center;
             border-radius: 20px;
-            background: var(--bg-secondary);
-            color: var(--text-primary);
+            background: rgba(200, 150, 100, 0.1);
+            color: var(--color-accent);
             text-decoration: none;
-            border: 2px solid var(--border-color);
+            border: 1px solid rgba(200, 150, 100, 0.2);
             transition: all var(--transition-normal);
             font-size: 1.5rem;
             position: relative;
@@ -640,48 +550,53 @@
             content: '';
             position: absolute;
             inset: 0;
-            border-radius: 20px;
-            background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
             opacity: 0;
             transition: opacity var(--transition-normal);
             z-index: -1;
         }
 
         .social-link:hover {
-            color: var(--color-white);
-            border-color: var(--accent-color);
-            transform: translateY(-8px) scale(1.1);
-            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
+            border-color: var(--color-accent);
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(200, 150, 100, 0.2);
         }
 
         .social-link:hover::before {
-            opacity: 1;
+            opacity: 0.15;
         }
 
         /* Footer */
         footer {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border-color);
-            padding: var(--space-40) var(--space-16);
+            background: rgba(0, 0, 0, 0.4);
+            border-top: none;
+            margin: var(--space-40) var(--space-20);
+            border-radius: 30px;
+            padding: var(--space-48) var(--space-40);
             text-align: center;
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.5);
             font-size: 0.9rem;
+            border: 1px solid rgba(200, 150, 100, 0.1);
         }
 
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: var(--space-32);
-            margin-bottom: var(--space-20);
+            gap: var(--space-40);
+            margin-bottom: var(--space-24);
             flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: rgba(255, 255, 255, 0.5);
             text-decoration: none;
-            transition: all var(--transition-fast);
-            font-weight: 500;
+            transition: color var(--transition-fast);
             position: relative;
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
         }
 
         .footer-links a::after {
@@ -690,110 +605,142 @@
             bottom: -4px;
             left: 0;
             width: 0;
-            height: 2px;
-            background: var(--accent-color);
+            height: 1px;
+            background: var(--color-accent);
             transition: width var(--transition-fast);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
         }
 
         .footer-links a:hover::after {
             width: 100%;
         }
 
-        /* Remove theme toggle button styling */
-        .theme-toggle {
-            display: none;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
+            .nav-container,
+            .container,
+            .content-section {
+                padding-left: var(--space-20);
+                padding-right: var(--space-20);
+            }
+
             .hero {
-                padding: var(--space-48) var(--space-16);
+                padding: var(--space-48) var(--space-20);
             }
 
-            .section-title {
-                font-size: 2rem;
+            .content-section {
+                padding: var(--space-48) var(--space-20);
             }
 
-            .skills, .services, .tech-stack, .contact {
-                padding: var(--space-48) var(--space-16);
+            .grid {
+                grid-template-columns: 1fr;
             }
 
             .cta-buttons {
                 flex-direction: column;
-                align-items: center;
             }
 
             .btn {
                 width: 100%;
-                justify-content: center;
             }
 
             .social-links {
                 gap: var(--space-16);
             }
+
+            .footer-links {
+                gap: var(--space-24);
+            }
         }
 
-        /* Page Transitions */
-        .page {
-            min-height: 100vh;
-            display: none;
-            opacity: 0;
-            transition: opacity var(--transition-normal);
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: var(--space-32);
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            z-index: 10;
         }
 
-        .page.active {
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-indicator span {
             display: block;
+            width: 24px;
+            height: 36px;
+            border: 2px solid var(--color-accent);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-indicator span::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            width: 2px;
+            height: 6px;
+            background: var(--color-accent);
+            border-radius: 1px;
+            animation: scroll-wheel 2s infinite;
+            transform: translateX(-50%);
+        }
+
+        @keyframes scroll-wheel {
+            0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+            100% { opacity: 0; transform: translateX(-50%) translateY(12px); }
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: var(--space-40);
+            right: var(--space-40);
+            width: 50px;
+            height: 50px;
+            background: rgba(200, 150, 100, 0.1);
+            border: 1px solid rgba(200, 150, 100, 0.3);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            opacity: 0;
+            visibility: hidden;
+            color: var(--color-accent);
+            font-size: 1.3rem;
+            z-index: 999;
+        }
+
+        .scroll-to-top.visible {
             opacity: 1;
+            visibility: visible;
         }
 
-        /* Legal Pages Styling */
-        .legal-content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: var(--space-48) var(--space-16);
+        .scroll-to-top:hover {
+            background: rgba(200, 150, 100, 0.2);
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(200, 150, 100, 0.2);
         }
 
-        .legal-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: var(--space-32);
-            text-align: center;
+        .scroll-to-top:active {
+            transform: translateY(-2px);
         }
 
-        .legal-content h2 {
-            font-size: 1.75rem;
-            margin-top: var(--space-40);
-            margin-bottom: var(--space-20);
-            color: var(--accent-color);
-        }
-
-        .legal-content h3 {
-            font-size: 1.25rem;
-            margin-top: var(--space-24);
-            margin-bottom: var(--space-12);
-        }
-
-        .legal-content p, .legal-content li {
-            color: var(--text-secondary);
-            margin-bottom: var(--space-16);
-            line-height: 1.8;
-        }
-
-        .legal-content ul, .legal-content ol {
-            margin-left: var(--space-32);
-            margin-bottom: var(--space-16);
-        }
-
-        .last-updated {
-            color: var(--text-tertiary);
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-top: var(--space-48);
-            padding-top: var(--space-24);
-            border-top: 1px solid var(--border-color);
+        @media (max-width: 768px) {
+            .scroll-to-top {
+                bottom: var(--space-20);
+                right: var(--space-20);
+                width: 45px;
+                height: 45px;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -803,448 +750,275 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">Adrian Dylan Wulf</a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#interests">Interessen</a></li>
-                <li><a href="#projects">Projekte</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">Über Mich</a></li>
+                <li><a href="#projects" class="nav-link">Projekte</a></li>
+                <li><a href="#tech" class="nav-link">Tech</a></li>
+                <li><a href="#contact" class="nav-link">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Pages Container -->
-    <main id="pagesContainer">
-        <!-- Home Page -->
-        <div id="homePage" class="page active">
-            <!-- Hero Section -->
-            <section class="hero" id="home">
-                <div class="container">
-                    <div class="hero-content">
-                        <h1>Adrian Dylan Wulf</h1>
-                        <p class="subtitle">Sicherheits-Enthusiast & Developer aus NRW</p>
-                        <p class="description">
-                            Leidenschaftlich interessiert an Webentwicklung, Email-Sicherheit und sicherer Infrastruktur. 
-                            In meiner Freizeit beschäftige ich mich mit modernen Email-Authentifizierungs-Standards und der Bereitstellung von sicheren Diensten.
-                        </p>
-                        <div class="cta-buttons">
-                            <a href="#interests" class="btn btn-primary">Meine Interessen</a>
-                        </div>
-                    </div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Adrian Dylan Wulf</h1>
+                <p class="tagline">Developer & Security Enthusiast</p>
+                <p class="subtitle">
+                    Fullstack-Entwicklung mit Fokus auf Sicherheit, Email-Authentifizierung und robuste Infrastruktur. 
+                    Ich baue sichere, moderne und performante Systeme.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">Projekte ansehen</a>
+                    <a href="mailto:contact@adriandylanwulf.de" class="btn btn-secondary">Kontakt aufnehmen</a>
                 </div>
-            </section>
+            </div>
+            <div class="scroll-indicator">
+                <span></span>
+            </div>
+        </section>
 
-            <!-- Interests Section -->
-            <section class="skills" id="interests">
-                <div class="container">
-                    <h2 class="section-title">Was mich fasziniert</h2>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">✉️</div>
-                            <h3>Email Security</h3>
-                            <p>SPF, DKIM, DMARC – Die Grundpfeiler der Email-Authentifizierung. Ich arbeite daran, meine Domain sicher zu konfigurieren.</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🔒</div>
-                            <h3>HSTS & Transport Security</h3>
-                            <p>HTTP Strict Transport Security, DANE, MTA-STS und TLS-RPT für sichere Kommunikation zwischen Servern.</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🏗️</div>
-                            <h3>Infrastruktur & DevOps</h3>
-                            <p>Docker, Systemadministration, Grafana für Monitoring und Plesk für Serververwaltung interessieren mich sehr.</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🔐</div>
-                            <h3>Datensicherheit</h3>
-                            <p>Nextcloud, sichere Dienste und Verschlüsselung. Die Bereitstellung sicherer Infrastrukturen ist meine Passion.</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">💻</div>
-                            <h3>Webentwicklung</h3>
-                            <p>React, Next.js, Node.js, TypeScript – Moderne Technologien interessieren mich sehr in meiner Freizeit.</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🌐</div>
-                            <h3>DNS & Protokolle</h3>
-                            <p>DNSSEC, DNS-Konfiguration und die Tiefe moderner Internet-Protokolle faszinieren mich immer wieder.</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">🧭</div>
-                            <h3>Reisen & Erkundungen</h3>
-                            <p>Ich erkunde gerne neue Orte und bin viel unterwegs. Die Welt entdecken und neue Kulturen kennenlernen gehört zu meinen Leidenschaften.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Learning Projects Section -->
-            <section class="services" id="projects">
-                <div class="container">
-                    <h2 class="section-title">Meine Hobbyprojekte</h2>
-                    <div class="services-grid">
-                        <div class="service-item">
-                            <h3>📧 Email-Authentifizierung</h3>
-                            <p>Implementierung von SPF, DKIM, DMARC für meine persönliche Domain. Das komplexe Zusammenspiel dieser Standards üben.</p>
-                        </div>
-                        <div class="service-item">
-                            <h3>🔐 MTA-STS & DANE</h3>
-                            <p>Erlernung moderner Email Transport Security Standards. DANE mit DNSSEC und MTA-STS für sichere Server-Kommunikation.</p>
-                        </div>
-                        <div class="service-item">
-                            <h3>📊 Monitoring Setup</h3>
-                            <p>Grafana, Prometheus und Monitoring-Stacks für die eigene Infrastruktur. Echte-Zeit-Überwachung selbst aufbauen.</p>
-                        </div>
-                        <div class="service-item">
-                            <h3>🖥️ Plesk & Nextcloud</h3>
-                            <p>Verwaltung und Optimierung von Plesk-Servern sowie Aufbau von Nextcloud-Instanzen für Datensicherheit.</p>
-                        </div>
-                        <div class="service-item">
-                            <h3>🌐 Web-Experimente</h3>
-                            <p>Testen neuer Web-Technologien, Performance-Optimierungen und sichere Coding-Praktiken.</p>
-                        </div>
-                        <div class="service-item">
-                            <h3>🛡️ TLS & HSTS</h3>
-                            <p>Tiefgehendes Verständnis von HSTS-Header, TLS-RPT und modernen Transport-Sicherheitsstandards.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Tech Stack Section -->
-            <section class="tech-stack">
-                <div class="container">
-                    <h2 class="section-title">Tech Stack</h2>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <strong>Frontend</strong>
-                            <span>React, Next.js, TypeScript, Tailwind CSS</span>
-                        </div>
-                        <div class="tech-item">
-                            <strong>Backend</strong>
-                            <span>Node.js, Express, NestJS, Python</span>
-                        </div>
-                        <div class="tech-item">
-                            <strong>Datenbanken</strong>
-                            <span>PostgreSQL, MongoDB, Redis, MySQL</span>
-                        </div>
-                        <div class="tech-item">
-                            <strong>DevOps</strong>
-                            <span>Docker, Kubernetes, GitHub Actions, CI/CD</span>
-                        </div>
-                        <div class="tech-item">
-                            <strong>Cloud</strong>
-                            <span>AWS, Vercel, DigitalOcean, Linode</span>
-                        </div>
-                        <div class="tech-item">
-                            <strong>Tools</strong>
-                            <span>Git, Linux, Grafana, Plesk, Nextcloud</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section class="contact" id="contact">
-                <div class="container">
-                    <h2>Kontakt & Austausch</h2>
-                    <p>Ich freue mich über Austausch zu technischen Themen und neue Erlebnisse. Wenn du vorbeischaust – sei es virtuell oder bei deinen Reisen – schreib mir gerne eine E-Mail.</p>
-                    <div class="social-links">
-                        <a href="mailto:contact@adriandylanwulf.de" class="social-link" title="E-Mail">✉️</a>
-                    </div>
-                    <p style="font-size: 0.9rem; color: var(--text-tertiary); margin-top: var(--space-24);">
-                        Der Code dieser Website liegt auf GitHub. Das ist mein Hobby-Projekt – eine persönliche Homepage, um moderne, sichere und performante Websites zu erstellen.
+        <!-- About Section -->
+        <section class="content-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Leidenschaft & Expertise</h2>
+                    <p class="section-description">
+                        Mit fundiertem Wissen in modernen Web-Technologien und IT-Sicherheit entwickle ich Lösungen, 
+                        die nicht nur funktionieren, sondern auch sicher und zukunftsorientiert sind.
                     </p>
                 </div>
-            </section>
-        </div>
-
-        <!-- Impressum Page -->
-        <div id="imprintPage" class="page">
-            <div class="legal-content">
-                <h1>Impressum</h1>
-                
-                <h2>Angaben gemäß § 5 TMG und § 7 Abs. 1 ECG</h2>
-                
-                <h3>Verantwortlich für den Inhalt</h3>
-                <p>
-                    Adrian Dylan Wulf<br>
-                    Nordrhein-Westfalen<br>
-                    Deutschland<br>
-                    <br>
-                    E-Mail: <a href="mailto:contact@adriandylanwulf.de">contact@adriandylanwulf.de</a>
-                </p>
-
-                <h2>Haftungsausschluss</h2>
-                
-                <h3>Haftung für Inhalte</h3>
-                <p>
-                    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität 
-                    der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene 
-                    Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 des TMG sind wir als 
-                    Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder 
-                    nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-                </p>
-
-                <h3>Haftung für Links</h3>
-                <p>
-                    Unsere Website enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb 
-                    können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets 
-                    der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der 
-                    Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
-                </p>
-
-                <h2>Datenschutz</h2>
-                <p>
-                    Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten 
-                    personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adresse) erhoben werden, erfolgt dies, soweit möglich, 
-                    stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. 
-                    Bitte beachten Sie unsere <a href="#" onclick="navigateTo('privacy')">Datenschutzerklärung</a> für weitere Informationen.
-                </p>
-
-                <h2>Urheberrecht</h2>
-                <p>
-                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. 
-                    Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes 
-                    bedürfen der schriftlichen Zustimmung des Autors oder Urhebers. Downloads und Kopien dieser Seite sind nur für den 
-                    privaten, nicht kommerziellen Gebrauch gestattet.
-                </p>
-
-                <h2>Bildquellen</h2>
-                <p>
-                    Alle auf dieser Website verwendeten Bilder und Grafiken sind entweder Originalwerke oder lizenziert. 
-                    Die Nutzungsrechte wurden entsprechend erworben.
-                </p>
-
-                <div class="last-updated">
-                    Zuletzt aktualisiert: Januar 2026
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-icon">✉️</div>
+                        <h3>Email Security</h3>
+                        <p>SPF, DKIM, DMARC, MTA-STS und DANE – Ich implementiere die modernen Standards der Email-Authentifizierung und stelle sicher, dass Ihre Kommunikation geschützt ist.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">🔒</div>
+                        <h3>Transport Security</h3>
+                        <p>HSTS, TLS-RPT und sichere Verbindungen. Ich konfiguriere Infrastruktur mit höchsten Sicherheitsstandards für sichere Server-Kommunikation.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">💻</div>
+                        <h3>Web Development</h3>
+                        <p>React, Next.js, Node.js und TypeScript – moderne Frontend- und Backend-Technologien für elegante, performante Webanwendungen.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">🏗️</div>
+                        <h3>Infrastructure</h3>
+                        <p>Docker, Kubernetes und CI/CD Pipelines. Ich designe und deploye skalierbare, wartbare Infrastrukturen für Productions-Umgebungen.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">🌐</div>
+                        <h3>DNS & Protokolle</h3>
+                        <p>DNSSEC, DNS-Optimierung und tiefes Verständnis von Internet-Protokollen. Robuste Netzwerk-Konfigurationen sind mein Standard.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">🧭</div>
+                        <h3>Problemlöser</h3>
+                        <p>Mit analytischem Denken und Leidenschaft für elegante Lösungen – ich gehe Herausforderungen strukturiert und kreativ an.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Datenschutzerklärung Page -->
-        <div id="privacyPage" class="page">
-            <div class="legal-content">
-                <h1>Datenschutzerklärung</h1>
-                
-                <h2>Allgemeines</h2>
-                <p>
-                    Der Schutz Ihrer Daten ist uns wichtig. Diese Datenschutzerklärung erläutert, welche Informationen wir erfassen 
-                    und wie wir diese verwenden.
-                </p>
-
-                <h2>Verantwortliche Stelle</h2>
-                <p>
-                    Adrian Dylan Wulf<br>
-                    Nordrhein-Westfalen, Deutschland<br>
-                    E-Mail: <a href="mailto:contact@adriandylanwulf.de">contact@adriandylanwulf.de</a>
-                </p>
-
-                <h2>1. Erfassung und Verarbeitung von Daten</h2>
-                
-                <h3>1.1 Automatisch erfasste Daten</h3>
-                <p>
-                    Bei der Nutzung unserer Website erfassen wir automatisch folgende Informationen:
-                </p>
-                <ul>
-                    <li>IP-Adresse (gekürzt für Datenschutz)</li>
-                    <li>Datum und Uhrzeit des Besuchs</li>
-                    <li>Besuchte Seiten</li>
-                    <li>Referrer-Information</li>
-                    <li>Browser- und Systemtyp</li>
-                    <li>Geographischer Standort (ungefähre Angabe auf Basis der IP)</li>
-                </ul>
-                <p>
-                    Diese Daten werden ausschließlich für statistische und analytische Zwecke verwendet und nicht an Dritte weitergegeben.
-                </p>
-
-                <h3>1.2 Vercel Analytics</h3>
-                <p>
-                    Diese Website nutzt Vercel Analytics zur Analyse von Besucherdaten. Vercel Analytics sammelt anonymisierte Daten 
-                    über die Nutzung dieser Website. Diese Informationen werden verwendet, um die Website-Performance zu verstehen und 
-                    zu verbessern. Die Datenerfassung kann in den Einstellungen Ihres Browsers deaktiviert werden.
-                </p>
-                <p>
-                    Weitere Informationen: <a href="https://vercel.com/analytics" target="_blank" rel="noopener noreferrer">
-                    Vercel Analytics Dokumentation
-                    </a>
-                </p>
-
-                <h3>1.3 Kontaktformulare</h3>
-                <p>
-                    Wenn Sie uns über E-Mail oder andere Kontaktmethoden kontaktieren, speichern wir die von Ihnen bereitgestellten 
-                    Informationen (Namen, E-Mail-Adresse, Nachrichteninhalt) ausschließlich zur Beantwortung Ihrer Anfrage.
-                </p>
-
-                <h2>2. Cookies und ähnliche Technologien</h2>
-                <p>
-                    Diese Website verwendet keine permanenten Cookies. Die Konfiguration des Dark/Light-Modus wird in Ihrem Browser 
-                    gespeichert (localStorage) und wird nicht zu Tracking-Zwecken verwendet.
-                </p>
-
-                <h2>3. Ihre Rechte</h2>
-                <p>
-                    Sie haben das Recht:
-                </p>
-                <ul>
-                    <li>Auskunft über Ihre gespeicherten Daten zu erhalten</li>
-                    <li>Berichtigung von fehlerhaften Daten zu verlangen</li>
-                    <li>Löschung Ihrer Daten zu verlangen (sofern keine gesetzliche Aufbewahrungspflicht besteht)</li>
-                    <li>Die Verarbeitung Ihrer Daten einzuschränken</li>
-                    <li>Der Verarbeitung Ihrer Daten zu widersprechen</li>
-                </ul>
-                <p>
-                    Um diese Rechte auszuüben, kontaktieren Sie uns bitte per E-Mail: 
-                    <a href="mailto:contact@adriandylanwulf.de">contact@adriandylanwulf.de</a>
-                </p>
-
-                <h2>4. Externe Links</h2>
-                <p>
-                    Diese Website enthält Links zu externen Websites. Wir sind nicht verantwortlich für die Datenschutzpraktiken 
-                    dieser externen Seiten. Bitte lesen Sie die Datenschutzerklärungen dieser Websites, bevor Sie personenbezogene 
-                    Daten angeben.
-                </p>
-
-                <h2>5. Sicherheit</h2>
-                <p>
-                    Wir implementieren angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten. Dies umfasst:
-                </p>
-                <ul>
-                    <li>HTTPS-Verschlüsselung für alle Übertragungen</li>
-                    <li>Sichere Server-Infrastruktur</li>
-                    <li>Regelmäßige Sicherheitsüberprüfungen</li>
-                    <li>Datenschutzkonforme Speicherung</li>
-                </ul>
-
-                <h2>6. Aufbewahrung von Daten</h2>
-                <p>
-                    Analytics-Daten werden in der Regel nicht länger als 13 Monate gespeichert. Kontaktdaten werden gelöscht, 
-                    sobald sie nicht mehr für die ursprüngliche Anfrage benötigt werden.
-                </p>
-
-                <h2>7. Änderungen dieser Datenschutzerklärung</h2>
-                <p>
-                    Wir behalten uns das Recht vor, diese Datenschutzerklärung jederzeit zu ändern. Bei wesentlichen Änderungen 
-                    werden wir Sie angemessen informieren.
-                </p>
-
-                <h2>8. Rechtliche Grundlagen</h2>
-                <p>
-                    Die Verarbeitung Ihrer Daten erfolgt auf Grundlage von:
-                </p>
-                <ul>
-                    <li>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</li>
-                    <li>Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse)</li>
-                    <li>Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung)</li>
-                </ul>
-
-                <div class="last-updated">
-                    Zuletzt aktualisiert: Januar 2026
+        <!-- Projects Section -->
+        <section class="content-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Hobbyprojekte & Lernreisen</h2>
+                    <p class="section-description">
+                        Ich setze meine Leidenschaft für Technologie in praktischen Projekten um und vertiefe ständig mein Wissen.
+                    </p>
+                </div>
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="grid-item-icon">📧</div>
+                        <h3>Email-Authentifizierung</h3>
+                        <p>Komplette Konfiguration von SPF, DKIM und DMARC für persönliche Domains. Tiefes Verständnis des Zusammenspiels dieser Standards.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">📊</div>
+                        <h3>Monitoring Setup</h3>
+                        <p>Grafana, Prometheus und Monitoring-Stacks. Aufbau von Echtzeit-Überwachung für Infrastruktur-Performance.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">🖥️</div>
+                        <h3>Server Management</h3>
+                        <p>Plesk-Administration und Nextcloud-Deployments. Verwaltung und Optimierung von Production-Servern.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">🔐</div>
+                        <h3>MTA-STS & DANE</h3>
+                        <p>Implementierung moderner Email Transport Security Standards mit DNSSEC und sichere Mail-Server-Kommunikation.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">⚡</div>
+                        <h3>Performance Optimization</h3>
+                        <p>Web-Performance-Optimierungen, Caching-Strategien und Load-Balancing für schnelle, zuverlässige Systeme.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="grid-item-icon">🛡️</div>
+                        <h3>Security Hardening</h3>
+                        <p>Best Practices für sichere Anwendungen, HSTS-Header-Konfiguration und Attack-Prevention-Strategien.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="content-section" id="tech">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-description">
+                        Die Tools und Technologien, mit denen ich moderne Lösungen entwickle.
+                    </p>
+                </div>
+                <div class="tech-list">
+                    <div class="tech-tag">
+                        <strong>Frontend</strong>
+                        <span>React, Next.js, TypeScript</span>
+                    </div>
+                    <div class="tech-tag">
+                        <strong>Styling</strong>
+                        <span>Tailwind CSS, SASS, CSS Grid</span>
+                    </div>
+                    <div class="tech-tag">
+                        <strong>Backend</strong>
+                        <span>Node.js, Express, NestJS</span>
+                    </div>
+                    <div class="tech-tag">
+                        <strong>Datenbanken</strong>
+                        <span>PostgreSQL, MongoDB, Redis</span>
+                    </div>
+                    <div class="tech-tag">
+                        <strong>DevOps</strong>
+                        <span>Docker, Kubernetes, CI/CD</span>
+                    </div>
+                    <div class="tech-tag">
+                        <strong>Cloud</strong>
+                        <span>AWS, Vercel, DigitalOcean</span>
+                    </div>
+                    <div class="tech-tag">
+                        <strong>Tools</strong>
+                        <span>Git, Linux, Grafana, Plesk</span>
+                    </div>
+                    <div class="tech-tag">
+                        <strong>Security</strong>
+                        <span>SSL/TLS, DNSSEC, DANE, SPF/DKIM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Kontakt & Austausch</h2>
+                </div>
+                <p class="contact-text">
+                    Ich freue mich über Austausch zu technischen Themen, Zusammenarbeit an interessanten Projekten oder einfach nur zum Netzwerken. 
+                    Schreib mir gerne eine E-Mail – egal ob Frage, Projekt oder einfach Hallo!
+                </p>
+                <div class="social-links">
+                    <a href="mailto:contact@adriandylanwulf.de" class="social-link" title="E-Mail">✉️</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-links">
-            <a href="#" onclick="navigateTo('imprint')">Impressum</a>
-            <a href="#" onclick="navigateTo('privacy')">Datenschutz</a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="mailto:contact@adriandylanwulf.de">Kontakt</a>
+            <a href="#imprint">Impressum</a>
+            <a href="#privacy">Datenschutz</a>
         </div>
-        <p>&copy; 2026 Adrian Dylan Wulf. Alle Rechte vorbehalten. | Designed with ❤️</p>
+        <p>&copy; 2026 Adrian Dylan Wulf. Alle Rechte vorbehalten.</p>
     </footer>
 
-    <script>
-        // Automatic Theme Detection based on System Preference
-        const htmlElement = document.documentElement;
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTopBtn" title="Zur Startseite">↑</button>
 
-        // Detect system preference
+    <script>
+        // Detect system theme
         function initTheme() {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                htmlElement.style.colorScheme = 'dark';
-            } else {
-                htmlElement.style.colorScheme = 'light';
-            }
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
         }
 
-        // Watch for system theme changes
+        // Watch for theme changes
         if (window.matchMedia) {
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                htmlElement.style.colorScheme = e.matches ? 'dark' : 'light';
+                document.documentElement.style.colorScheme = e.matches ? 'dark' : 'light';
             });
         }
 
-        // Scroll Event Handler for Navigation
-        let isScrolling = false;
-        function handleNavScroll() {
-            const nav = document.querySelector('nav');
-            const scrollY = window.scrollY;
-            
-            if (scrollY > 50) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        }
-
-        window.addEventListener('scroll', handleNavScroll, { passive: true });
-
-        // Page Navigation
-        function navigateTo(page) {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(p => {
-                p.classList.remove('active');
-            });
-
-            // Show selected page
-            let pageElement;
-            if (page === 'home') pageElement = document.getElementById('homePage');
-            else if (page === 'imprint') pageElement = document.getElementById('imprintPage');
-            else if (page === 'privacy') pageElement = document.getElementById('privacyPage');
-
-            if (pageElement) {
-                pageElement.classList.add('active');
-                window.scrollTo(0, 0);
-                handleNavScroll();
-            }
-        }
-
-        // Navigation links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    navigateTo('home');
-                    setTimeout(() => {
-                        const target = document.querySelector(href);
-                        if (target) {
-                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                    }, 100);
-                }
-            });
-        });
-
-        // Smooth scroll for navigation
+        // Smooth scroll navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href !== '#home' && !href.includes('onclick')) {
-                    const target = document.querySelector(href);
-                    if (target && document.getElementById('homePage').classList.contains('active')) {
-                        e.preventDefault();
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
                         target.scrollIntoView({ behavior: 'smooth' });
+                        updateActiveNav();
                     }
                 }
             });
         });
 
-        // Initialize theme
-        initTheme();
+        // Update active nav link on scroll
+        function updateActiveNav() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
 
-        // Inject Vercel Analytics (comment out if not deployed on Vercel)
-        // For production: inject({ mode: 'production' });
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }, { passive: true });
+        }
+
+        // Initialize
+        initTheme();
+        updateActiveNav();
+
+        // Scroll to Top Button functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        // Scroll to top on button click
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 </html>
